@@ -5,6 +5,7 @@ import packageJson from './package.json';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const packageVersion = packageJson.version;
+const packageName = packageJson.name;
 
 export default defineConfig({
 	build: {
@@ -19,12 +20,14 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				entryFileNames: (info) => {
-					if (info.name.includes('main')) return `[name]-${packageVersion}.min.js`;
+					if (info.name.includes('main'))
+						return `${packageName}-${packageVersion}.min.js`;
 					return `[name].js`;
 				},
 				assetFileNames: (info) => {
 					// Check for CSS files and apply versioning
-					if (info.name?.endsWith('.css')) return `[name]-${packageVersion}[extname]`;
+					if (info.name?.endsWith('.css'))
+						return `${packageName}-${packageVersion}[extname]`;
 
 					// For all other assets (e.g., images), use a standard pattern
 					return `[name]-[hash][extname]`;
