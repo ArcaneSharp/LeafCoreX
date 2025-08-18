@@ -1,0 +1,25 @@
+{
+	"name": "assets",
+	"private": "true",
+	"version": "1.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"test": "",
+		"preview": "vite preview"
+	},
+	"keywords": [],
+	"author": "Niklas",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@types/node": "^24.3.0",
+		"sass": "^1.90.0",
+		"typescript": "^5.9.2",
+		"vite": "^6.3.5"
+	}
+}

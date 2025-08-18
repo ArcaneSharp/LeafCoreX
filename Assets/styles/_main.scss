@@ -1,0 +1,9 @@
+$blue: #2563eb;
+$white: white;
+
+.btn {
+    color: $white;
+    background-color: $blue;
+    display: flex;
+    padding: 6px;
+}

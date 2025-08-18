@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Components/Components.csproj" />
+  <Project Path="Website/Website.csproj" />
+</Solution>
