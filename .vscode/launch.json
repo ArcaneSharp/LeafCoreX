@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "Attach and Debug",
+      "type": "blazorwasm",
+      "request": "attach",
+      "browser": "chrome",
+      "url": "https://localhost:7167"
+    }
+  ]
+}

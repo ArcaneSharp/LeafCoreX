@@ -15,11 +15,13 @@
     <ProjectReference Include="..\Components\Components.csproj" />
   </ItemGroup>
 
-  <Target Name="CopyDevEntry" Condition="'$(Configuration)' == 'Debug'" AfterTargets="Build">
+  <Target Name="CopyDevEntry" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="Build">
+    <Message Text="Copying DEV entry html file." Importance="high" />
     <Copy SourceFiles="Entries/index.dev.html" DestinationFiles="wwwroot/index.html" />
   </Target>
-  <Target Name="CopyProdIndex" Condition="'$(Configuration)' == 'Release'" AfterTargets="Build">
+  <Target Name="CopyProdIndex" Condition="'$(Configuration)' == 'Release'" BeforeTargets="Build">
+    <Message Text="Copying PROD entry html file." Importance="high" />
     <Copy SourceFiles="Entries/index.prod.html" DestinationFiles="wwwroot/index.html" />
   </Target>
-
+  
 </Project>
